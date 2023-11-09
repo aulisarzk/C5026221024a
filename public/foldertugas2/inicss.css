@@ -1,0 +1,27 @@
+body {
+  background-image: url(Bg.png);
+  background-size: cover;
+  position: relative;
+  backdrop-filter: brightness(0.7);
+  font-family: Nunito;
+}
+
+.lisol-logo {
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  width: 140px;
+  height: 35px;
+}
+
+.lisol-font-judul {
+  font-size: 40pt;
+}
+
+.lisol-judul-icon {
+  font-size: 18pt;
+}
+
+.lisol-font {
+  font-size: 14pt;
+}

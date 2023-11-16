@@ -10,5 +10,6 @@
     <p>Nama : {{ $nama }}</p>
     <p>Alamat : {{ $alamat }}</p>
     <p>Umur : {{ $umur }}</p>
+
 </body>
 </html>

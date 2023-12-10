@@ -1,5 +1,5 @@
 @extends('master2')
-@section('judulhalaman', 'Data Pegawai')
+@section('judulhalaman', 'Data Keranjang Belanja')
 
 @section('konten')
     <h3>Keranjang Belanja</h3>

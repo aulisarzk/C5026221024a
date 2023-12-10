@@ -15,7 +15,7 @@
         <a class="navbar-brand" href="#">5026221024 Aulisa Rizki Amanda</a>
 
         <!-- Links -->
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">Link 1</a>
           </li>
@@ -32,6 +32,8 @@
               <a class="dropdown-item" href="/pegawai">Pegawai</a>
               <a class="dropdown-item" href="#"></a>
               <a class="dropdown-item" href="/keranjangbelanja">Keranjang Belanja</a>
+              <a class="dropdown-item" href="#"></a>
+              <a class="dropdown-item" href="/sepatu">Sepatu</a>
             </div>
           </li>
         </ul>

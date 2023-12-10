@@ -80,3 +80,13 @@ Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index')
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
+
+//sepatu
+Route::get('/sepatu','App\Http\Controllers\SepatuController@index');
+Route::get('/sepatu/tambah','App\Http\Controllers\SepatuController@tambah');
+Route::post('/sepatu/store','App\Http\Controllers\SepatuController@store');
+Route::get('/sepatu/edit/{id}','App\Http\Controllers\SepatuController@edit');
+Route::post('/sepatu/update','App\Http\Controllers\SepatuController@update');
+Route::get('/sepatu/hapus/{id}','App\Http\Controllers\SepatuController@hapus');
+Route::get('/sepatu/view/{id}','App\Http\Controllers\SepatuController@lihat');
+Route::get('/sepatu/cari','App\Http\Controllers\SepatuController@cari');

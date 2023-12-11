@@ -95,3 +95,8 @@ Route::get('/sepatu/cari','App\Http\Controllers\SepatuController@cari');
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@index');
 Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiController@store');
+
+//chat
+Route::get('/chat','App\Http\Controllers\ChatController@index');
+Route::get('/chat/tambah','App\Http\Controllers\ChatController@tambah');
+Route::post('/chat/store','App\Http\Controllers\ChatController@store');

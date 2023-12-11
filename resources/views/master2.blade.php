@@ -36,6 +36,8 @@
               <a class="dropdown-item" href="/sepatu">Sepatu</a>
               <a class="dropdown-item" href="#"></a>
               <a class="dropdown-item" href="/nilaikuliah">Nilai Kuliah</a>
+              <a class="dropdown-item" href="#"></a>
+              <a class="dropdown-item" href="/chat">Chat</a>
             </div>
           </li>
         </ul>

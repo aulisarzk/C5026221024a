@@ -1,35 +1,41 @@
 @extends('master2')
-@section('judulhalaman', 'Chat')
+@section('judulhalaman','Chat')
 @section('konten')
 
-    <br />
-    <h3>Pesan</h3>
+	<h3>Pesan</h3>
 
-    <a href="/chat/tambah" class="btn btn-primary"> + Tambah Pesan</a>
-    <br />
-    <br />
+    <style>
+        .emot {
 
-    <table class="table table-striped table-hover">
-        <tr class="text-center">
-            <th>ID</th>
-            <th>Pesan</th>
-        </tr>
-        @foreach ($chat as $c)
-            <tr class="text-center">
-                <td>{{ $c->id }}</td>
-                <td>{{ $c->pesan }}</td>
-                <td>
-                    @if ($c->pesan == ":))")
-                        A
-                    @elseif ($c->pesan == ":3")
-                        B
-                    @elseif ($c->pesan == ":P")
-                        C
-                    @else
-                        D
-                    @endif
-                </td>
-            </tr>
-        @endforeach
-    </table>
+        max-width: 20px;
+        max-height: 20px;
+        }
+    </style>
+
+    @foreach ($chat as $c)
+    <div>
+        @php
+            $teksconvert = [
+                ':))' => '1.png',
+                ':3'  => '2.png',
+                ':P'  => '3.png',
+                ':C'  => '4.png',
+                ';)'  => '5.png',
+            ];
+            // memecah pesan menjadi array kata-kata
+            $teks = explode(' ', $c->pesan);
+            // menggantikan kata-kata tertentu dengan gambar
+            $teks = array_map(function($kata) use ($teksconvert) {
+                return isset($teksconvert[$kata]) ? '<img src="' . asset('/Pictures/' . $teksconvert[$kata]) . '" alt="' . $kata . '" class="emot" />' : $kata;
+            }, $teks);
+            $c->pesan = implode(' ', $teks);
+        @endphp
+
+        {!! $c->pesan !!}
+    </div>
+@endforeach
+</div>
+<br>
+<br>
+<br>
 @endsection

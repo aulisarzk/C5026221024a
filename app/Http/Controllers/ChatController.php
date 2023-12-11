@@ -31,8 +31,11 @@ class ChatController extends Controller
 
 	}
 
-    public function explode()
+    public function showImages()
     {
-        $str = 
+        $images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+
+        return view('index', ['images' => $images]);
     }
+
 }

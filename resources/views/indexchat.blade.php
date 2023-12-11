@@ -22,9 +22,9 @@
                 ':C'  => '4.png',
                 ';)'  => '5.png',
             ];
-            // memecah pesan menjadi array kata-kata
+
             $teks = explode(' ', $c->pesan);
-            // menggantikan kata-kata tertentu dengan gambar
+            
             $teks = array_map(function($kata) use ($teksconvert) {
                 return isset($teksconvert[$kata]) ? '<img src="' . asset('/Pictures/' . $teksconvert[$kata]) . '" alt="' . $kata . '" class="emot" />' : $kata;
             }, $teks);

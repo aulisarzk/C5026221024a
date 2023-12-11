@@ -31,22 +31,22 @@ class SepatuController extends Controller
 			'stocksepatu' => $request->stocksepatu,
 			'tersedia' => $request->tersedia = ($request->stocksepatu != 0) ? 'Y':'N',
 		]);
-		// alihkan halaman ke halaman pegawai
+		// alihkan halaman ke halaman sepatu
 		return redirect('/sepatu');
 
 	}
 
-	// method untuk edit data pegawai
+	// method untuk edit data sepatu
 	public function edit($id)
 	{
-		// mengambil data pegawai berdasarkan id yang dipilih
+		// mengambil data sepatu berdasarkan id yang dipilih
 		$sepatu = DB::table('sepatu')->where('kodesepatu',$id)->get();
 		// passing data sepatu yang didapat ke view edit.blade.php
 		return view('editSepatu',['sepatu' => $sepatu]);
 
 	}
 
-	// update data pegawai
+	// update data sepatu
 	public function update(Request $request)
 	{
 		// update data
@@ -56,23 +56,23 @@ class SepatuController extends Controller
 			'stocksepatu' => $request->stocksepatu,
 			'tersedia' => $request->tersedia = ($request->stocksepatu != 0) ? 'Y':'N',
 		]);
-		// alihkan halaman ke halaman pegawai
+		// alihkan halaman ke halaman sepatu
 		return redirect('/sepatu');
 	}
 
-	// method untuk hapus data pegawai
+	// method untuk hapus data sepatu
 	public function hapus($id)
 	{
-		// menghapus data pegawai berdasarkan id yang dipilih
+		// menghapus data sepatu berdasarkan id yang dipilih
 		DB::table('sepatu')->where('kodesepatu',$id)->delete();
 
-		// alihkan halaman ke halaman pegawai
+		// alihkan halaman ke halaman sepatu
 		return redirect('/sepatu');
 	}
 
     public function lihat($id)
 	{
-		// mengambil data pegawai berdasarkan id yang dipilih
+		// mengambil data sepatu berdasarkan id yang dipilih
 		$sepatu = DB::table('sepatu')->where('kodesepatu',$id)->get();
 
 		return view('viewSepatu',['sepatu' => $sepatu]);

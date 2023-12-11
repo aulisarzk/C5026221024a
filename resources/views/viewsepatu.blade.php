@@ -25,7 +25,7 @@
                             <label for="kodesepatu" class="col-sm-2 col-form-label">Kode Sepatu</label>
                             <div class="col-sm-10">
 
-                                <input type="text" class="form-control" required="required" name="kodesepatu"
+                                <input type="number" class="form-control" required="required" name="kodesepatu"
                                     value="{{ $s->kodesepatu }}">
                             </div>
                         </div>
@@ -40,13 +40,14 @@
                             <label for="stocksepatu" class="col-sm-2 col-form-label">Stock Sepatu</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" id="stocksepatu" required="required"
-                                    name="ustocksepatu" value="{{ $s->stocksepatu }}">
+                                    name="stocksepatu" value="{{ $s->stocksepatu }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="tersedia" class="col-sm-2 col-form-label">Tersedia</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="tersedia" required="required" name="tersedia">{{ $s->tersedia }}</textarea>
+                                <input type="text" class="form-control" id="tersedia" required="required"
+                                    name="tersedia" value="{{ $s->tersedia }}">
                             </div>
                         </div>
                         <input type="hidden" name="kodesepatu" value="{{ $s->kodesepatu }}"> <br />

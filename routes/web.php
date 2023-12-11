@@ -90,3 +90,8 @@ Route::post('/sepatu/update','App\Http\Controllers\SepatuController@update');
 Route::get('/sepatu/hapus/{id}','App\Http\Controllers\SepatuController@hapus');
 Route::get('/sepatu/view/{id}','App\Http\Controllers\SepatuController@lihat');
 Route::get('/sepatu/cari','App\Http\Controllers\SepatuController@cari');
+
+//nilai kuliah
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@index');
+Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiController@tambah');
+Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiController@store');
